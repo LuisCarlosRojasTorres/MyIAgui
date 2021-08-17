@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "DlgAbout.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,5 +18,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QString version = QString(" 1.0.0");
+
+    DlgAbout *about = new DlgAbout(version);
 };
 #endif // MAINWINDOW_H
